@@ -38,5 +38,5 @@
 - `/mnt/data` 等で提供された HTTP/gRPC/Tango の実コードと既存生成器を読む。
 - `DeviceProxy` が引数をそのまま creator に渡すこと、重複登録エラー、複数デバイス共存をテストする。
 - 専用クライアントの override が型スタブで保持されることを静的型チェッカーで検証する（ユニットテストだけでは静的型検査は確認できない）。
-- README.md/README.en.md、docs/ja/docs/en、AGENTS.md の契約を同期する。
+- README.md/README.ja.md、docs/ja/docs/en、AGENTS.md の契約を同期する。
 - ユーザーの承認なしにパッケージ名、登録方式、同期・非同期仕様を変更しない。
