@@ -38,5 +38,21 @@
 - `/mnt/data` 等で提供された HTTP/gRPC/Tango の実コードと既存生成器を読む。
 - `DeviceProxy` が引数をそのまま creator に渡すこと、重複登録エラー、複数デバイス共存をテストする。
 - 専用クライアントの override が型スタブで保持されることを静的型チェッカーで検証する（ユニットテストだけでは静的型検査は確認できない）。
-- README.md/README.en.md、docs/ja/docs/en、AGENTS.md の契約を同期する。
+- README.md/README.ja.md、docs/ja/docs/en、AGENTS.md の契約を同期する。
 - ユーザーの承認なしにパッケージ名、登録方式、同期・非同期仕様を変更しない。
+
+## 配布名・インポート名・README リンク（変更禁止）
+
+- PyPI 配布名およびリポジトリ名（現パッケージ名）: `device-proxy-factory`。
+- Python インポート名: `device_proxy`。`device_proxy_factory` に戻さない。
+- `src/device_proxy_factory/`、`[tool.setuptools.package-data].device_proxy`、Sphinx の apidoc 対象、全テスト・使用例を一致させる。
+- 英語 README: `README.md`、日本語 README: `README.ja.md`。README 間の切替は同じリポジトリ内の相対リンク `README.md` / `README.ja.md` を使用する。
+- README と Pages の言語切替を混同しない。README 本文はリンク修正のために書き直さない。
+
+
+## 固定された配布名・インポート名（変更禁止）
+- PyPI 配布名: `device-proxy-factory`
+- Python import 名: `device_proxy_factory`
+- Python ソース: `src/device_proxy_factory/`
+- `from device_proxy_factory import DeviceProxy`
+- `device_proxy` への改名は禁止。利用者が明示しない限り README 本文を再作成しない。
