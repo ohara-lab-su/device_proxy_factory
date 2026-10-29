@@ -1,7 +1,7 @@
 # device-proxy-factory
 
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://ohara-lab-su.github.io/device-proxy-factory/en/index.html)
-[![ja](https://img.shields.io/badge/lang-ja-yellow.svg)](https://ohara-lab-su.github.io/device-proxy-factory/ja/index.html)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/ohara-lab-su/device-proxy-factory/blob/main/README.md)
+[![ja](https://img.shields.io/badge/lang-ja-yellow.svg)](https://github.com/ohara-lab-su/device-proxy-factory/blob/main/README.ja.md)
 
 [![GitHub](https://img.shields.io/badge/GitHub-ohara--lab--su%2Fdevice--proxy--factory-181717?logo=github)](https://github.com/ohara-lab-su/device-proxy-factory/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Documentation-222222?logo=githubpages&logoColor=white)](https://ohara-lab-su.github.io/device-proxy-factory/ja/)
