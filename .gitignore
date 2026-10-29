@@ -1,0 +1,15 @@
+!KPOINTS
+!POTCAR
+!POSCAR
+!INCAR
+
+example/
+try/
+
+__pycache__/
+build/
+work/
+.idea/
+*.egg-info/
+*.pyc
+*.py[cod]
