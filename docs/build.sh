@@ -13,6 +13,10 @@ for lang in en ja; do
   sphinx-build -b html -D language="$lang" -c "$DOCS_DIR" "$DOCS_DIR/$lang" "$DOCS_DIR/_build/html/$lang"
 done
 
-# ルートも英語版と同一ソースから生成する。
-sphinx-build -b html -D language=en -c "$DOCS_DIR" "$DOCS_DIR/en" "$DOCS_DIR/_build/html"
+# docs/index.md を Pages ルートの index.html としてビルドする。
+# 各言語の HTML は個別に生成したものを優先する。
+sphinx-build -b html -D language=en -c "$DOCS_DIR" "$DOCS_DIR" "$DOCS_DIR/_build/root"
+cp "$DOCS_DIR/_build/root/index.html" "$DOCS_DIR/_build/html/index.html"
+cp -R "$DOCS_DIR/_build/root/_static" "$DOCS_DIR/_build/html/"
+cp -R "$DOCS_DIR/_build/root/_images" "$DOCS_DIR/_build/html/" 2>/dev/null || true
 touch "$DOCS_DIR/_build/html/.nojekyll"

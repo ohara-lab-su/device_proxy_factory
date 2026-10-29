@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "device-proxy-factory"
-version = "0.0.0"
+version = "0.2.0"
 description = "Transport-independent device client factory registry"
 readme = "README.md"
 requires-python = ">=3.7"
-license = { text = "Apache-2.0" }
-authors = [{ name = "Ohara Lab" }]
+license = {text = "Apache-2.0"}
+authors = [{name = "Ohara Lab"}]
 dependencies = ["typing_extensions>=4.0"]
 
 [tool.setuptools.packages.find]
