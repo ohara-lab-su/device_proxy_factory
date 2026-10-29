@@ -1,0 +1,20 @@
+{
+  "devices": [
+    {
+      "device_class": "ExampleHttpCtrl",
+      "async_client": "example_http.clients.AsyncExampleClient",
+      "sync_client": "example_http.clients.SyncExampleClient",
+      "default_async_mode": true
+    },
+    {
+      "device_class": "ExampleGrpcCtrl",
+      "async_client": "example_grpc.clients.AsyncExampleGrpcClient",
+      "sync_client": "example_grpc.clients.SyncExampleGrpcClient",
+      "default_async_mode": false
+    },
+    {
+      "device_class": "ExampleTangoDevice",
+      "client": "example_tango.device_client.DeviceClient"
+    }
+  ]
+}
