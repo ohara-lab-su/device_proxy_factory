@@ -45,7 +45,7 @@
 
 - PyPI 配布名およびリポジトリ名（現パッケージ名）: `device-proxy-factory`。
 - Python インポート名: `device_proxy`。`device_proxy_factory` に戻さない。
-- `src/device_proxy_factory/`、`[tool.setuptools.package-data].device_proxy`、Sphinx の apidoc 対象、全テスト・使用例を一致させる。
+- `src/device_proxy_factory/`、`[tool.setuptools.package-data].device_proxy_factory`、Sphinx の apidoc 対象、全テスト・使用例を一致させる。
 - 英語 README: `README.md`、日本語 README: `README.ja.md`。README 間の切替は同じリポジトリ内の相対リンク `README.md` / `README.ja.md` を使用する。
 - README と Pages の言語切替を混同しない。README 本文はリンク修正のために書き直さない。
 
@@ -56,3 +56,13 @@
 - Python ソース: `src/device_proxy_factory/`
 - `from device_proxy_factory import DeviceProxy`
 - `device_proxy` への改名は禁止。利用者が明示しない限り README 本文を再作成しない。
+
+
+## GitHub Pages の共通ビルド方式（必須）
+
+- 添付の `packmol_util/docs/build.sh` を基準とし、変更は `src/packmol_util` → `src/device_proxy_factory` のみ。
+- `docs/en` を `/en/` と Pages ルート `/` の双方へビルドする。`docs/ja` は `/ja/` にビルドする。
+- `docs/index.md` を独立したソースツリーとしてビルドしない。`_build/root` から HTML をコピーしない。
+- 配布名 `device-proxy-factory`、import 名 `device_proxy_factory`、GitHub リポジトリ名 `device_proxy_factory` を混同しない。
+- README の言語切替は `README.md` / `README.ja.md` へ、Pages は `/en/index.html` / `/ja/index.html` へ。
+- ビルドスクリプトを修正したら必ず元の共通方式との差分、`src` パス、生成先、toctree を検査する。
